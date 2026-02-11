@@ -1,6 +1,17 @@
-export default function About() {
+"use client";
+import { motion } from "framer-motion";
+
+  export default function About() {
   return (
-    <section id="about" className="py-24 bg-[#020617] text-center text-gray-300 px-6">
+    <motion.section
+  id="about"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="py-24 bg-[#020617] text-center text-gray-300 px-6"
+>
+
       <h2 className="text-3xl font-bold text-blue-400">About Me</h2>
 
       <p className="mt-6 max-w-3xl mx-auto text-lg leading-relaxed">
@@ -9,6 +20,7 @@ export default function About() {
         real-world machine learning problems, exploring data-driven insights,
         and continuously improving my skills through hands-on projects.
       </p>
-    </section>
+    </motion.section>
+
   );
 }
