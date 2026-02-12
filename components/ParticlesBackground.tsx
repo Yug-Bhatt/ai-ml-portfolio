@@ -13,20 +13,35 @@ export default function ParticlesBackground() {
       id="tsparticles"
       init={particlesInit}
       options={{
-        background: { color: "transparent" },
+        background: {
+          color: "transparent",
+        },
         particles: {
-          number: { value: 40 },
-          color: { value: "#3b82f6" },
+          number: {
+            value: 60,
+          },
+          color: {
+            value: "#60a5fa",
+          },
           links: {
             enable: true,
-            color: "#3b82f6",
-            distance: 150
+            color: "#60a5fa",
+            distance: 120,
+            opacity: 0.4,
           },
-          move: { enable: true, speed: 1 },
-          size: { value: 2 }
-        }
+          move: {
+            enable: true,
+            speed: 1,
+          },
+          size: {
+            value: 3,
+          },
+          opacity: {
+            value: 0.6,
+          },
+        },
       }}
-      className="fixed inset-0 -z-10"
+      className="fixed inset-0 z-0"
     />
   );
 }

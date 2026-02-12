@@ -3,9 +3,9 @@
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
-import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
+import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import ParticlesBackground from "@/components/ParticlesBackground";
 
@@ -13,11 +13,14 @@ export default function Home() {
   return (
     <>
       <Navbar />
+
+      {/* Particle Background */}
       <ParticlesBackground />
 
+      {/* MAIN HERO */}
       <main
         id="home"
-        className="min-h-screen flex items-center justify-center px-6 relative"
+        className="relative z-10 min-h-screen flex items-center justify-center px-6"
       >
         <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
 
@@ -36,12 +39,12 @@ export default function Home() {
                 alt="Yug Bhatt"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ repeat: Infinity, duration: 4 }}
-                 className="relative w-64 h-64 object-cover rounded-full border-4 border-blue-500 shadow-lg"
+                className="relative w-64 h-64 object-cover rounded-full border-4 border-blue-500 shadow-lg"
               />
             </div>
           </motion.div>
 
-          {/* RIGHT: Text Content */}
+          {/* RIGHT: Text */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -52,24 +55,22 @@ export default function Home() {
               Yug Bhatt
             </h1>
 
-            
-              <h2 className="mt-4 text-xl text-blue-400">
-                <Typewriter
-                  words={[
-                    "AI Engineer",
-                    "Machine Learning Developer",
-                    "Data Science Enthusiast",
+            <h2 className="mt-4 text-xl text-blue-400">
+              <Typewriter
+                words={[
+                  "AI Engineer",
+                  "Machine Learning Developer",
+                  "Data Science Enthusiast",
                   "Deep Learning Explorer"
-                  ]}
-                  loop={true}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
+                ]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
                 delaySpeed={1500}
               />
             </h2>
-            
 
             <p className="mt-6 text-gray-400 max-w-lg">
               Turning data into intelligent solutions using Machine Learning & AI.
