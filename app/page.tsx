@@ -8,11 +8,13 @@ import Contact from "@/components/Contact";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import ParticlesBackground from "@/components/ParticlesBackground";
+import CursorGlow from "@/components/CursorGlow";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <CursorGlow />
 
       {/* Particle Background */}
       <ParticlesBackground />
