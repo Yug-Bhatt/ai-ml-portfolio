@@ -6,11 +6,14 @@ import Projects from "@/components/Projects";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
+import { Typewriter } from "react-simple-typewriter";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <ParticlesBackground />
 
       <main
         id="home"
@@ -28,10 +31,12 @@ export default function Home() {
             <div className="relative">
               <div className="absolute -inset-4 bg-blue-500/20 blur-2xl rounded-full"></div>
 
-              <img
+              <motion.img
                 src="/yug_1.jpg"
                 alt="Yug Bhatt"
-                className="relative w-64 h-64 object-cover rounded-full border-4 border-blue-500 shadow-lg"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ repeat: Infinity, duration: 4 }}
+                 className="relative w-64 h-64 object-cover rounded-full border-4 border-blue-500 shadow-lg"
               />
             </div>
           </motion.div>
@@ -47,9 +52,24 @@ export default function Home() {
               Yug Bhatt
             </h1>
 
-            <h2 className="mt-4 text-xl text-blue-400">
-              Aspiring AI & Machine Learning Engineer
+            
+              <h2 className="mt-4 text-xl text-blue-400">
+                <Typewriter
+                  words={[
+                    "AI Engineer",
+                    "Machine Learning Developer",
+                    "Data Science Enthusiast",
+                  "Deep Learning Explorer"
+                  ]}
+                  loop={true}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                delaySpeed={1500}
+              />
             </h2>
+            
 
             <p className="mt-6 text-gray-400 max-w-lg">
               Turning data into intelligent solutions using Machine Learning & AI.
