@@ -7,64 +7,96 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
 
-
 export default function Home() {
   return (
     <>
-    <Navbar />
-      <main id="home" className="min-h-screen bg-[#020617] text-white flex flex-col items-center justify-center text-center px-6">
-      <motion.h1
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="text-5xl md:text-6xl font-bold tracking-tight"
->
-        Yug Bhatt
-      </motion.h1>
+      <Navbar />
 
+      <main
+        id="home"
+        className="min-h-screen flex items-center justify-center text-center px-6 relative"
+      >
+        <div className="relative">
+          {/* Glow background */}
+          <div className="absolute -inset-10 bg-blue-500/10 blur-3xl rounded-full"></div>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="mt-4 text-xl md:text-2xl text-blue-400"
->
-          Aspiring AI & Machine Learning Engineer
-        </motion.h2>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.2,
+                },
+              },
+            }}
+            className="relative z-10"
+          >
+            {/* Name */}
+            <motion.h1
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent"
+            >
+              Yug Bhatt
+            </motion.h1>
 
+            {/* Subtitle */}
+            <motion.h2
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              className="mt-4 text-xl md:text-2xl text-blue-400"
+            >
+              Aspiring AI & Machine Learning Engineer
+            </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
-          className="mt-6 max-w-xl text-gray-400"
-        >
-          Turning data into intelligent solutions using Machine Learning & AI.
-        </motion.p>
+            {/* Description */}
+            <motion.p
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              className="mt-6 max-w-xl mx-auto text-gray-400"
+            >
+              Turning data into intelligent solutions using Machine Learning & AI.
+            </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="mt-10 flex gap-4"
-        >
-          <button className="px-6 py-3 rounded-xl bg-blue-500 hover:bg-blue-600 hover:scale-105 active:scale-95 transition-transform duration-300">
-            View Projects
-          </button>
+            {/* Buttons */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              className="mt-10 flex justify-center gap-4"
+            >
+              <a
+                href="#projects"
+                className="px-6 py-3 rounded-xl bg-blue-500 hover:bg-blue-600 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-blue-500/20"
+              >
+                View Projects
+              </a>
 
-          <button className="px-6 py-3 rounded-xl border border-blue-500 text-blue-400 hover:bg-blue-500/10 hover:scale-105 active:scale-95 transition-transform duration-300">
-            Download Resume
-          </button>
-
-        </motion.div>
+              <a
+                href="/Yug_Bhatt_Resume.pdf"
+                download
+                className="px-6 py-3 rounded-xl border border-blue-500 text-blue-400 hover:bg-blue-500/10 hover:scale-105 active:scale-95 transition-all duration-300"
+              >
+                Download Resume
+              </a>
+            </motion.div>
+          </motion.div>
+        </div>
       </main>
 
       <About />
       <Skills />
       <Projects />
       <Contact />
-
-
     </>
   );
 }
