@@ -1,21 +1,22 @@
 "use client";
 
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-[#020617]/80 backdrop-blur-md border-b border-blue-900 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-
+    <nav className="fixed top-0 w-full z-50 bg-[#020617]/80 backdrop-blur-md border-b border-blue-900">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        
         {/* Logo */}
-        <h1 className="text-white font-semibold text-lg">
+        <h1 className="text-lg font-semibold text-white">
           Yug Bhatt
         </h1>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 text-gray-300">
+        <div className="hidden md:flex gap-8 text-gray-300">
           <a href="#home" className="hover:text-blue-400 transition">Home</a>
           <a href="#about" className="hover:text-blue-400 transition">About</a>
           <a href="#skills" className="hover:text-blue-400 transition">Skills</a>
@@ -26,22 +27,22 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
+          className="md:hidden text-white p-2"
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white text-2xl"
         >
-          ☰
+          {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Dropdown */}
       {open && (
-        <div className="md:hidden bg-[#020617] border-t border-blue-900 px-6 py-4 space-y-4 text-gray-300">
-          <a href="#home" className="block hover:text-blue-400">Home</a>
-          <a href="#about" className="block hover:text-blue-400">About</a>
-          <a href="#skills" className="block hover:text-blue-400">Skills</a>
-          <a href="#projects" className="block hover:text-blue-400">Projects</a>
-          <a href="#certifications" className="block hover:text-blue-400">Certifications</a>
-          <a href="#contact" className="block hover:text-blue-400">Contact</a>
+        <div className="md:hidden bg-[#020617] border-t border-blue-900 px-6 pb-6 space-y-4 text-gray-300">
+          <a href="#home" onClick={() => setOpen(false)}>Home</a>
+          <a href="#about" onClick={() => setOpen(false)}>About</a>
+          <a href="#skills" onClick={() => setOpen(false)}>Skills</a>
+          <a href="#projects" onClick={() => setOpen(false)}>Projects</a>
+          <a href="#certifications" onClick={() => setOpen(false)}>Certifications</a>
+          <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
         </div>
       )}
     </nav>
