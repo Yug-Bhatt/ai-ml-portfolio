@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import ParticlesBackground from "@/components/ParticlesBackground";
+import CursorGlow from "@/components/CursorGlow";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -17,18 +20,24 @@ export const metadata: Metadata = {
   description: "Aspiring AI & Machine Learning Engineer portfolio",
 };
 
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative bg-[#020617] text-white overflow-x-hidden`}
       >
-        {children}
+        {/* Global Background Effects */}
+        <ParticlesBackground />
+        <CursorGlow />
+
+        {/* Main Content */}
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );

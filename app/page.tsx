@@ -17,8 +17,7 @@ export default function Home() {
       <Navbar />
       <CursorGlow />
 
-      {/* Particle Background */}
-      <ParticlesBackground />
+      
 
       {/* MAIN HERO */}
       <main
