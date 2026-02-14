@@ -8,14 +8,14 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#020617]/80 backdrop-blur-md border-b border-blue-900">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+
         {/* Logo */}
-        <h1 className="text-lg font-semibold text-white">
+        <h1 className="text-xl font-bold text-white">
           Yug Bhatt
         </h1>
 
-        {/* Desktop Menu */}
+        {/* Desktop Links */}
         <div className="hidden md:flex gap-8 text-gray-300">
           <a href="#home" className="hover:text-blue-400 transition">Home</a>
           <a href="#about" className="hover:text-blue-400 transition">About</a>
@@ -27,7 +27,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white p-2"
+          className="md:hidden text-white"
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={28} /> : <Menu size={28} />}
@@ -36,7 +36,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {open && (
-        <div className="md:hidden bg-[#020617] border-t border-blue-900 px-6 pb-6 space-y-4 text-gray-300">
+        <div className="md:hidden bg-[#0f172a] border-t border-blue-900 px-6 py-4 flex flex-col gap-4 text-gray-300">
           <a href="#home" onClick={() => setOpen(false)}>Home</a>
           <a href="#about" onClick={() => setOpen(false)}>About</a>
           <a href="#skills" onClick={() => setOpen(false)}>Skills</a>
