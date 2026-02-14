@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import ParticlesBackground from "@/components/ParticlesBackground";
 import CursorGlow from "@/components/CursorGlow";
+import Certifications from "@/components/Certifications";
 
 export default function Home() {
   return (
@@ -102,6 +103,7 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
+      <Certifications />
       <Contact />
     </>
   );
