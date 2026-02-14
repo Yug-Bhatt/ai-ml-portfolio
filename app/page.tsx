@@ -5,21 +5,17 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
+import Certifications from "@/components/Certifications";
+
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import ParticlesBackground from "@/components/ParticlesBackground";
-import CursorGlow from "@/components/CursorGlow";
-import Certifications from "@/components/Certifications";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <CursorGlow />
 
-      
-
-      {/* MAIN HERO */}
+      {/* HERO SECTION */}
       <main
         id="home"
         className="relative z-10 min-h-screen flex items-center justify-center px-6"
@@ -63,7 +59,7 @@ export default function Home() {
                   "AI Engineer",
                   "Machine Learning Developer",
                   "Data Science Enthusiast",
-                  "Deep Learning Explorer"
+                  "Deep Learning Explorer",
                 ]}
                 loop={true}
                 cursor
@@ -99,6 +95,7 @@ export default function Home() {
         </div>
       </main>
 
+      {/* OTHER SECTIONS */}
       <About />
       <Skills />
       <Projects />
