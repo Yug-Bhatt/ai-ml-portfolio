@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
   viewport={{ once: true }}
-  className="py-24 bg-[#020617] text-center text-gray-300 px-6"
+  className="py-24 text-center text-gray-300 px-6"
 >
 
       <h2 className="text-3xl font-bold text-blue-400">About Me</h2>

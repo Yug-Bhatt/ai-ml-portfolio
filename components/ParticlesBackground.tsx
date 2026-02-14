@@ -13,35 +13,62 @@ export default function ParticlesBackground() {
       init={particlesInit}
       options={{
         fullScreen: { enable: false },
+
         background: {
           color: "transparent",
         },
+
         particles: {
           number: {
-            value: 35, // ↓ less particles
+            value: 120, // MORE particles
+            density: {
+              enable: true,
+              area: 800,
+            },
           },
+
           color: {
-            value: "#3b82f6",
+            value: ["#3b82f6", "#60a5fa", "#2563eb"], // multi-tone blue
           },
+
           links: {
             enable: true,
             color: "#3b82f6",
-            distance: 160,
-            opacity: 0.15, // ↓ softer
-            width: 1,
+            distance: 130,
+            opacity: 0.6, // brighter lines
+            width: 1.5,
           },
+
           move: {
             enable: true,
-            speed: 0.6, // ↓ slower = premium
+            speed: 1.5, // slightly faster
           },
+
           size: {
-            value: 2,
+            value: 3.5, // bigger dots
           },
+
           opacity: {
-            value: 0.25, // ↓ much softer
+            value: 0.8, // less dull
           },
         },
-        detectRetina: true,
+
+        interactivity: {
+          events: {
+            onHover: {
+              enable: true,
+              mode: "grab",
+            },
+          },
+          modes: {
+            grab: {
+              distance: 180,
+              links: {
+                opacity: 1,
+              },
+            },
+          },
+        },
       }}
       className="fixed inset-0 z-0 pointer-events-none"
     />
