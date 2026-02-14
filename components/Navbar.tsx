@@ -7,10 +7,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#020617]/90 backdrop-blur-md border-b border-blue-900">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#020617]/95 backdrop-blur-md border-b border-blue-900 overflow-x-hidden">
       
-      {/* Container */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-4 flex items-center justify-between">
+      <div className="w-full px-4 sm:px-6 py-4 flex items-center justify-between">
         
         {/* Logo */}
         <h1 className="text-xl font-bold text-white">
@@ -30,7 +29,7 @@ export default function Navbar() {
         {/* Mobile Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white p-2 rounded-md hover:bg-blue-500/10 transition"
+          className="md:hidden text-white p-2 -mr-2"
         >
           {open ? <X size={26} /> : <Menu size={26} />}
         </button>
@@ -38,7 +37,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {open && (
-        <div className="md:hidden bg-[#0f172a]/95 backdrop-blur-lg border-t border-blue-900 px-6 py-6 flex flex-col gap-6 text-gray-300">
+        <div className="md:hidden bg-[#0f172a] border-t border-blue-900 px-4 py-6 flex flex-col gap-6 text-gray-300">
           <a href="#home" onClick={() => setOpen(false)}>Home</a>
           <a href="#about" onClick={() => setOpen(false)}>About</a>
           <a href="#skills" onClick={() => setOpen(false)}>Skills</a>
