@@ -20,6 +20,7 @@ export default function Navbar() {
           <a href="#about" className="hover:text-blue-400 transition">About</a>
           <a href="#skills" className="hover:text-blue-400 transition">Skills</a>
           <a href="#projects" className="hover:text-blue-400 transition">Projects</a>
+          <a href="#certifications" className="hover:text-blue-400 transition">Certifications</a>
           <a href="#contact" className="hover:text-blue-400 transition">Contact</a>
         </div>
 
@@ -40,6 +41,9 @@ export default function Navbar() {
           <a href="#skills" className="block hover:text-blue-400">Skills</a>
           <a href="#projects" className="block hover:text-blue-400">Projects</a>
           <a href="#contact" className="block hover:text-blue-400">Contact</a>
+          <a href="#certifications" className="block hover:text-blue-400">
+            Certifications
+          </a>
         </div>
       )}
     </nav>
