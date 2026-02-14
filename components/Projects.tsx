@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative z-10 py-24 px-6 bg-[#020617] text-gray-300"
+      className="relative z-10 py-24 px-6 text-gray-300"
     >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-blue-400 mb-12">
@@ -21,9 +21,18 @@ export default function Projects() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.98 }}
           onClick={() => setOpen(true)}
-          className="cursor-pointer p-8 rounded-2xl border border-blue-900 bg-[#0f172a] 
-          hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/30 
-          transition-all duration-300 backdrop-blur-sm"
+          className="
+            cursor-pointer 
+            p-8 
+            rounded-2xl 
+            border border-blue-500/40
+            bg-[#0f172a]/60
+            backdrop-blur-md
+            hover:border-blue-400 
+            hover:shadow-2xl 
+            hover:shadow-blue-500/40
+            transition-all duration-300
+          "
         >
           <h3 className="text-xl font-semibold text-blue-300">
             Intelligent ML System
@@ -38,14 +47,23 @@ export default function Projects() {
         <AnimatePresence>
           {open && (
             <motion.div
-              className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
+              className="fixed inset-0 bg-black/60 backdrop-blur-md flex items-center justify-center z-50"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setOpen(false)}
             >
               <motion.div
-                className="bg-[#0f172a] p-8 rounded-2xl max-w-lg w-full border border-blue-800 shadow-2xl shadow-blue-500/30"
+                className="
+                  bg-[#0f172a]/80 
+                  backdrop-blur-xl
+                  p-8 
+                  rounded-2xl 
+                  max-w-lg 
+                  w-full 
+                  border border-blue-500/40 
+                  shadow-2xl shadow-blue-500/30
+                "
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
@@ -58,7 +76,8 @@ export default function Projects() {
 
                 <p className="mt-4 text-gray-400">
                   This project focuses on preprocessing real-world datasets,
-                  training ML models, evaluating performance metrics, and optimizing results.
+                  training ML models, evaluating performance metrics,
+                  and optimizing results.
                 </p>
 
                 <div className="mt-6 text-blue-400 text-sm">
