@@ -40,10 +40,10 @@ export default function Navbar() {
           <a href="#about" className="block hover:text-blue-400">About</a>
           <a href="#skills" className="block hover:text-blue-400">Skills</a>
           <a href="#projects" className="block hover:text-blue-400">Projects</a>
-          <a href="#contact" className="block hover:text-blue-400">Contact</a>
           <a href="#certifications" className="block hover:text-blue-400">
             Certifications
           </a>
+          <a href="#contact" className="block hover:text-blue-400">Contact</a>
         </div>
       )}
     </nav>
