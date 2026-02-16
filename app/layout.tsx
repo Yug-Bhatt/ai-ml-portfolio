@@ -4,6 +4,7 @@ import "./globals.css";
 
 import ParticlesBackground from "@/components/ParticlesBackground";
 import CursorGlow from "@/components/CursorGlow";
+import { ThemeProvider } from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,18 +27,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative bg-[#020617] text-white overflow-x-hidden`}
+        className={`
+          ${geistSans.variable} 
+          ${geistMono.variable} 
+          antialiased 
+          relative 
+          overflow-x-hidden
+          bg-white text-black
+          dark:bg-[#020617] dark:text-white
+          transition-colors duration-300
+        `}
       >
-        {/* Global Background Effects */}
-        <ParticlesBackground />
-        <CursorGlow />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
 
-        {/* Main Content */}
-        <div className="relative z-10">
-          {children}
-        </div>
+          {/* Global Background Effects */}
+          <ParticlesBackground />
+          <CursorGlow />
+
+          {/* Main Content */}
+          <div className="relative z-10">
+            {children}
+          </div>
+
+        </ThemeProvider>
       </body>
     </html>
   );

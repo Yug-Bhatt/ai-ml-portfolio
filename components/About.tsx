@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative z-10 py-28 px-6 text-gray-300"
+      className="relative z-10 py-32 px-6 text-gray-300"
     >
       <div className="max-w-6xl mx-auto">
 
@@ -15,69 +15,78 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-blue-400 text-center mb-16"
+          className="text-4xl md:text-5xl font-bold text-blue-400 text-center mb-20"
         >
           About Me
         </motion.h2>
 
         {/* Grid Layout */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
 
           {/* Left Side - Description */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-[#0f172a]/70 backdrop-blur-md border border-blue-900 rounded-2xl p-8 shadow-xl shadow-blue-500/10"
+            className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 shadow-xl"
           >
             <p className="text-lg leading-relaxed text-gray-400">
-              I am an aspiring{" "}
+              I am a{" "}
               <span className="text-blue-400 font-semibold">
-                AI & Machine Learning Engineer
+                B.Tech Artificial Intelligence & Machine Learning student
               </span>{" "}
-              passionate about building intelligent systems that learn from data.
+              passionate about designing intelligent systems that learn from data
+              and solve real-world problems.
             </p>
 
             <p className="mt-6 text-lg leading-relaxed text-gray-400">
-              I enjoy solving real-world ML problems, exploring data-driven
-              insights, and continuously improving my skills through hands-on
-              projects.
+              My interests lie in Machine Learning, Deep Learning, and Data Science.
+              I enjoy transforming raw data into meaningful insights and building
+              scalable AI-driven solutions through hands-on projects.
+            </p>
+
+            <p className="mt-6 text-gray-500 text-sm">
+              Currently focused on strengthening my fundamentals in model development,
+              data preprocessing, and performance optimization.
             </p>
           </motion.div>
 
           {/* Right Side - Highlights */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="grid gap-6"
+            className="grid gap-8"
           >
-            <div className="bg-[#0f172a]/60 backdrop-blur-md border border-blue-900 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
+            {/* Card 1 */}
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300">
               <h3 className="text-blue-300 font-semibold text-lg">
                 🚀 Continuous Learner
               </h3>
               <p className="text-gray-400 mt-2">
-                Actively building AI projects and earning certifications.
+                Actively building AI projects, exploring research concepts, and earning certifications.
               </p>
             </div>
 
-            <div className="bg-[#0f172a]/60 backdrop-blur-md border border-blue-900 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
+            {/* Card 2 */}
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300">
               <h3 className="text-blue-300 font-semibold text-lg">
-                🤖 AI Enthusiast
+                🤖 AI & ML Focused
               </h3>
               <p className="text-gray-400 mt-2">
-                Interested in Deep Learning, Data Science & Intelligent Systems.
+                Strong interest in Deep Learning, NLP, and building data-driven intelligent systems.
               </p>
             </div>
 
-            <div className="bg-[#0f172a]/60 backdrop-blur-md border border-blue-900 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
+            {/* Card 3 */}
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300">
               <h3 className="text-blue-300 font-semibold text-lg">
                 💡 Problem Solver
               </h3>
               <p className="text-gray-400 mt-2">
-                Focused on applying ML to real-world impactful challenges.
+                Focused on applying Machine Learning to practical challenges with measurable impact.
               </p>
             </div>
           </motion.div>

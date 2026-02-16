@@ -1,6 +1,7 @@
 "use client";
 
 import About from "@/components/About";
+import Education from "@/components/Education";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Navbar from "@/components/Navbar";
@@ -18,20 +19,20 @@ export default function Home() {
       {/* HERO SECTION */}
       <main
         id="home"
-        className="relative z-10 min-h-screen flex items-center justify-center px-6 pt-24"
+        className="relative z-10 min-h-screen flex items-center justify-center px-6 pt-28"
       >
         <div className="max-w-6xl w-full grid md:grid-cols-2 gap-16 items-center">
 
           {/* LEFT: Photo */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="flex justify-center"
           >
             <div className="relative">
-              {/* Glow */}
-              <div className="absolute -inset-6 bg-blue-500/20 blur-3xl rounded-full"></div>
+              {/* Bigger Glow */}
+              <div className="absolute -inset-8 bg-blue-500/20 blur-3xl rounded-full"></div>
 
               <motion.img
                 src="/yug_1.jpg"
@@ -45,22 +46,33 @@ export default function Home() {
 
           {/* RIGHT: Text */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center md:text-left"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
-              Yug Bhatt
+            {/* Badge */}
+            <span className="inline-block px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-sm text-blue-400">
+              B.Tech AIML @ CHARUSAT
+            </span>
+
+            {/* Main Headline */}
+            <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              Engineering the{" "}
+              <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
+                Intelligent
+              </span>{" "}
+              Future.
             </h1>
 
-            <h2 className="mt-4 text-lg md:text-xl text-blue-400 min-h-[32px]">
+            {/* Typewriter */}
+            <h2 className="mt-5 text-lg md:text-xl text-blue-400 min-h-[32px]">
               <Typewriter
                 words={[
                   "AI Engineer",
                   "Machine Learning Developer",
-                  "Data Science Enthusiast",
                   "Deep Learning Explorer",
+                  "Data Science Enthusiast",
                 ]}
                 loop={true}
                 cursor
@@ -71,10 +83,18 @@ export default function Home() {
               />
             </h2>
 
+            {/* Description */}
             <p className="mt-6 text-gray-400 max-w-lg mx-auto md:mx-0">
-              Turning data into intelligent solutions using Machine Learning & AI.
+              I build intelligent systems using Machine Learning,
+              Deep Learning and Data Science to solve real-world problems.
             </p>
 
+            {/* Internship Line */}
+            <p className="mt-3 text-sm text-blue-400">
+              🚀 Currently seeking AI/ML Internship Opportunities
+            </p>
+
+            {/* Buttons */}
             <div className="mt-10 flex gap-4 justify-center md:justify-start flex-wrap">
               <a
                 href="#projects"
@@ -100,6 +120,7 @@ export default function Home() {
       <div className="space-y-32 pb-32 relative z-10">
         <About />
         <Skills />
+        <Education />
         <Projects />
         <Certifications />
         <Contact />
