@@ -104,12 +104,12 @@ export default function Home() {
               </a>
 
               <a
-                href="/Yug_Bhatt_Resume.pdf"
-                download
-                className="px-6 py-3 rounded-xl border border-blue-500 text-blue-400 hover:bg-blue-500/10 hover:scale-105 active:scale-95 transition-all duration-300"
-              >
-                Download Resume
-              </a>
+                href="/YUG_BHATT_Resume.pdf"
+                download="YUG_BHATT_Resume.pdf"
+                className="px-6 py-3 rounded-xl bg-blue-500 hover:bg-blue-600 transition"
+                >
+  Download Resume
+</a>
             </div>
           </motion.div>
 
