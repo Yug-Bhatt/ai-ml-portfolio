@@ -50,6 +50,8 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center md:text-left"
+
+            
           >
             {/* Badge */}
             <span className="inline-block px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-sm text-blue-400">
@@ -58,11 +60,11 @@ export default function Home() {
 
             {/* Main Headline */}
             <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Engineering the{" "}
+              Designing the{" "}
               <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
-                Intelligent
+                Future
               </span>{" "}
-              Future.
+              with Intelligence.
             </h1>
 
             {/* Typewriter */}
@@ -85,7 +87,7 @@ export default function Home() {
 
             {/* Description */}
             <p className="mt-6 text-gray-400 max-w-lg mx-auto md:mx-0">
-              I build intelligent systems using Machine Learning,
+              I am Yug Bhatt. I build intelligent systems using Machine Learning,
               Deep Learning and Data Science to solve real-world problems.
             </p>
 
