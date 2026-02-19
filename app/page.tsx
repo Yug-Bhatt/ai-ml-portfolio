@@ -125,6 +125,14 @@ export default function Home() {
         <Certifications />
         <Contact />
       </div>
+      <footer className="relative z-10 py-12 text-center">
+  <div className="max-w-6xl mx-auto border-t border-white/10 pt-8">
+    <p className="text-gray-400 text-sm tracking-wide">
+      © 2026 <span className="text-blue-400 font-medium">Yug Bhatt</span> —
+      Engineering Intelligent Futures.
+    </p>
+  </div>
+</footer>
     </>
   );
 }
